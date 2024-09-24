@@ -1,0 +1,120 @@
+
+/*Overall Font of the page*/
+
+*{ font-family: "chakra_petchlight" ; color: rgb(255, 255, 255);
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+/*title*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {letter-spacing: 60px;
+    font-size: 100px;
+    padding: 30px;
+    margin-top: 30px;
+    ;
+}
+
+/*background*/
+
+body {
+    background-image: url('images/blackHeaderSlow2.gif'); /* Path to your GIF */
+    background-size: cover; /* Ensure the GIF covers the entire background */
+    background-position: center; /* Center the GIF */
+    background-repeat: no-repeat; /* Prevent repeating the GIF */
+}
+
+/*alignment*/
+section {text-align: center;
+}
+
+/*nav link font size*/
+
+.nav-link{ font-size: 30px;
+
+}
+
+nav {
+    text-align: center; 
+	word-spacing: 20px;
+	padding: 50px;
+    margin-bottom: 30px;
+}
+
+/*H2 configuration*/
+
+h2 {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    word-spacing: 30px;
+    font-style: oblique;
+
+}
+
+/*H3 configuration*/
+
+h3 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+    margin: 20px;
+    padding: 30px;
+
+}
+
+/*H4 configuration*/
+
+h4{
+    font-size: 20px;
+
+}
+
+/*P configuration*/
+
+p {
+    font-size: 15px;
+    margin: 20px;
+
+
+}
+
+/*Start of FORM configuration*/
+
+form{
+    max-width: 400px; /* Limits the form width */
+margin: 0 auto; /* Centers the form horizontally */
+padding: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="message"], textarea, select {
+    width: 100%; /* Makes fields take full width of the form */
+    padding: 5px; /* Adds padding for better spacing */
+    margin-bottom: 15px; /* Adds space between each field */
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+    font-size: 16px;
+}
+label{
+    padding: 5px;
+}
+button{
+    color: black;
+}
+
+/*end of FORM configuration*/
+
+html{
+	scroll-behavior: smooth;
+}
+
+/*insertcomment*/
