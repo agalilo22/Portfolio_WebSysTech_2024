@@ -2,41 +2,44 @@
 <html lang="en">
 <head>
     <title>Juan Dela Cruz - Creative Portfolio</title>
-
+    <!-- Link to external CSS files -->
     <link rel="stylesheet" type="text/css" href="./index.css">
-    <link rel="stylesheet" href="font\stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/stylesheet.css" type="text/css" charset="utf-8" />
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>juan dela cruz</h1>
-    
+        <h1>juan dela cruz</h1> <!-- Portfolio owner name/title -->
     </header>
     
-    <!--Nav Bar -->
+    <!-- Navigation Bar -->
     <nav id="top">
-            <a href="#home" class="nav-link">home </a>
-            <a href="#about" class= "nav-link">about </a>
-            <a href="#services" class= "nav-link">services </a>
-            <a href="#projects" class="nav-link">projects</a>
-            <a href="#contact" class="nav-link">contact</a>
+        <!-- Navigation links for each section -->
+        <a href="#home" class="nav-link">home</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#services" class="nav-link">services</a>
+        <a href="#projects" class="nav-link">projects</a>
+        <a href="#contact" class="nav-link">contact</a>
     </nav>
 
     <!-- Home Section -->
     <section id="home">
-        <h2>WEB DEVELOPMENT. DESIGN. ENTHUSIASM.</h2>
+        <h2>WEB DEVELOPMENT. DESIGN. ENTHUSIASM.</h2> <!-- Section intro text -->
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h3>who--?</h3>
+        <h3>about</h3> <!-- Heading introducing the 'About' section -->
         <p>a passionate developer with experience in creating modern web applications. to build digital experiences that are engaging, functional, and visually appealing is my objective.</p>
     </section>
 
+    
+
     <!-- Services Section -->
     <section id="services">
-        <h3>Services</h3>
+        <h3>services</h3>
+        <!-- List of services offered -->
         <ul>
             <li>Web Development</li>
             <li>UI/UX Design</li>
@@ -46,8 +49,9 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h3>Projects</h3>
+        <h3>projects</h3>
         <div>
+            <!-- Each article represents a project -->
             <article>
                 <h4>Project 1</h4>
                 <p>A brief description of Project 1.</p>
@@ -65,25 +69,55 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Get In Touch</h2>
+        <h3>get in touch</h3> <!-- Form heading for the contact section -->
+
+        <!-- Social Media Links with Icons -->
+        <div class="personal-links">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                <img src="images\7091829_message_mail_ui_email_user interface_icon.png" alt="Email Icon" class="icon">
+            </a>
+            <a href="https://twitter.com/your-profile" target="_blank">
+                <img src="images\4070143_linkedin_social icons_social media_icon.png" alt="LinkedIn Icon" class="icon">
+            </a>
+            <a href="https://github.com/your-profile" target="_blank">
+                <img src="images\211903_github_social_icon.png" alt="GitHub Icon" class="icon">
+            </a>
+            <a href="https://github.com/your-profile" target="_blank">
+                <img src="images\4070150_tweet_twitter_twitter icon_icon.png" alt="Twitter Icon" class="icon">
+            </a>
+            <a href="https://github.com/your-profile" target="_blank">
+                <img src="images\4070142_instagram_social icons_social media_icon.png" alt="Instagram Icon" class="icon">
+            </a>
+            <a href="https://github.com/your-profile" target="_blank">
+                <img src="images\4070139_facebook_fb_social icon_social media_icon.png" alt="Facebook Icon" class="icon">
+            </a>
+            
+        </div>
+        
         <form action="#" method="post">
+            <!-- Input fields for contact form -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required> <!-- Text input for Name -->
             <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required> <!-- Text input for Email -->
             <br>
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea> <!-- Message input -->
             <br>
-            <button type="submit">Send Message</button>
+            <button type="submit">Send Message</button> <!-- Submit button for the form -->
         </form>
+
+           
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Juan Dela Cruz. All rights reserved.</p>
+        <p>&copy; 2024 Juan Dela Cruz. All rights reserved.</p> <!-- Footer section with copyright -->
+        
     </footer>
+    <!-- Back to Top Link -->
+     <a href="#top" class="back-to-top">Back to Top</a>
 
 </body>
 </html>
