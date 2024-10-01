@@ -25,20 +25,19 @@
 
     <!-- Home Section -->
     <section id="home">
-        <h2>WEB DEVELOPMENT. DESIGN. ENTHUSIASM.</h2> <!-- Section intro text -->
+        <h2>WEB DEVELOPMENT. DESIGN. ENTHUSIASM.</h2> <!-- catchphrase -->
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h3>about</h3> <!-- Heading introducing the 'About' section -->
-        <p>a passionate developer with experience in creating modern web applications. to build digital experiences that are engaging, functional, and visually appealing is my objective.</p>
+        <h3 class=" about ">about</h3> <!-- Heading introducing the 'About' section -->
+        <p>a passionate developer with experience in creating modern web applications. to build digital experiences that are engaging, functional, and visually appealing is my objective.</p> <!-- Introduction of the person -->
     </section>
 
     
-
     <!-- Services Section -->
     <section id="services">
-        <h3>services</h3>
+        <h3 class = "services"> services</h3>
         <!-- List of services offered -->
         <ul>
             <li>Web Development</li>
@@ -47,48 +46,72 @@
         </ul>
     </section>
 
+     
+
     <!-- Projects Section -->
     <section id="projects">
-        <h3>projects</h3>
-        <div>
-            <!-- Each article represents a project -->
-            <article>
-                <h4>Project 1</h4>
-                <p>A brief description of Project 1.</p>
-            </article>
-            <article>
-                <h4>Project 2</h4>
-                <p>A brief description of Project 2.</p>
-            </article>
-            <article>
-                <h4>Project 3</h4>
-                <p>A brief description of Project 3.</p>
-            </article>
-        </div>
+        <h3 class = "projects"> projects</h3>
+
+         <!-- Filter Dropdown -->
+      <div class="filter-container">
+        <img src="images\10862915_fi_br_bars_filter_icon (1).png" alt="Filter Icon" class="filter-icon">
+        <span id="selected-filter">-</span> <!-- This will display the selected filter -->
+        
+        <!-- Dropdown for filtering options -->
+        <select id="filter-dropdown">
+            <option value="All" selected>All</option>
+            <option value="frontend">Front End</option>
+            <option value="backend">Back End</option>
+            <option value="fullstack">Full Stack</option>
+        </select>
+
+
+      <!-- List of Projects -->   
+
+    </div>
+
+        <!-- Front End Project -->
+        <article class="project frontend">
+            <h4>Project 1 (Front End)</h4>
+            <p>A brief description of Front End Project 1.</p>
+        </article>
+
+        <!-- Back End Project -->
+        <article class="project backend">
+            <h4>Project 2 (Back End)</h4>
+            <p>A brief description of Back End Project 2.</p>
+        </article>
+
+        <!-- Full Stack Project -->
+        <article class="project fullstack">
+            <h4>Project 3 (Full Stack)</h4>
+            <p>A brief description of Full Stack Project 3.</p>
+        </article>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact">
-        <h3>get in touch</h3> <!-- Form heading for the contact section -->
+        <h3 class="get-in-touch"> get in touch </h3> <!-- Form heading for the contact section -->
 
         <!-- Social Media Links with Icons -->
         <div class="personal-links">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <a href="mailto:juandelacruz@gmail.com" target="_blank">
                 <img src="images\7091829_message_mail_ui_email_user interface_icon.png" alt="Email Icon" class="icon">
             </a>
-            <a href="https://twitter.com/your-profile" target="_blank">
+            <a href="https://www.linkedin.com" target="_blank">
                 <img src="images\4070143_linkedin_social icons_social media_icon.png" alt="LinkedIn Icon" class="icon">
             </a>
-            <a href="https://github.com/your-profile" target="_blank">
+            <a href="https://github.com" target="_blank">
                 <img src="images\211903_github_social_icon.png" alt="GitHub Icon" class="icon">
             </a>
-            <a href="https://github.com/your-profile" target="_blank">
+            <a href="https://x.com/?logout=1727794332155" target="_blank">
                 <img src="images\4070150_tweet_twitter_twitter icon_icon.png" alt="Twitter Icon" class="icon">
             </a>
-            <a href="https://github.com/your-profile" target="_blank">
+            <a href="https://www.instagram.com" target="_blank">
                 <img src="images\4070142_instagram_social icons_social media_icon.png" alt="Instagram Icon" class="icon">
             </a>
-            <a href="https://github.com/your-profile" target="_blank">
+            <a href="https://www.facebook.com" target="_blank">
                 <img src="images\4070139_facebook_fb_social icon_social media_icon.png" alt="Facebook Icon" class="icon">
             </a>
             

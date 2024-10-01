@@ -1,42 +1,41 @@
 /*Overall Font and color setup*/
 * { 
-    font-family: "chakra_petchlight"; /* Apply the font family */
-    color: rgb(255, 255, 255); /* Set text color to white */
+    font-family: "chakra_petchlight"; 
+    color: rgb(255, 255, 255); 
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    box-sizing: border-box; 
 }
 
 /*Header Styling*/
 header {
     display: flex;
-    justify-content: center; /* Center align the header content */
-    align-items: center; /* Vertically center the text */
+    justify-content: center; 
+    align-items: center; 
 }
 
 h1 {
-    letter-spacing: 60px; /* Increase space between characters */
-    font-size: 100px; /* Large font size for the header */
+    letter-spacing: 60px; 
+    font-size: 100px; 
     padding: 30px;
     margin-top: 30px;
 }
 
 /*Body background setup*/
 body {
-    background-image: url('images/blackHeaderSlow2.gif'); /* Background GIF */
-    background-size: cover; /* Ensure background covers entire screen */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent repeating the background */
-    background-attachment: fixed; /* Fixes the background in place */
-    min-height: 100vh; /* Ensures the background takes at least 100% of the viewport height */
+    background-image: url('images/blackHeaderSlow2.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh;
 }
-/*General alignment for sections*/
-section {
-    text-align: left; /* Center align the text inside sections */
-    padding-left: 40px; /*Add some padding to the left to avoid touching the screen edge*/
-    margin: 20px; /*Add some margin around sections*/
-}
+/*Specific styles for sections*/
 
+section {
+    padding-left: 40px; 
+    margin: 20px; 
+}
 
 /* Specific styles for section titles (h3) */
 section h3 {
@@ -47,27 +46,26 @@ section h3 {
 /* Specific styles for paragraph (p) text in sections */
 section p {
     text-align: center;
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 25px;
+    margin: 10px;
 }
 
 /* Specific styles for lists in services */
-/* Ensure the text is left-aligned, but the bullets appear centered */
 section ul {
     list-style-type: none;
-    padding-left: 0; /* Reset default padding */
-    text-align: center; /* Center the list as a block */
-    font-size: 20px;
+    padding-left: 0; 
+    text-align: center; 
+    font-size: 35px;
 }
 
 /*Navigation link styling*/
 .nav-link { 
-    font-size: 30px; /* Large font size for nav links */
+    font-size: 30px;
 }
 
 nav {
-    text-align: center; /* Center align the nav links */
-    word-spacing: 20px; /* Add spacing between the words */
+    text-align: center; 
+    word-spacing: 20px; 
     padding: 50px;
     margin-bottom: 30px;
 }
@@ -77,8 +75,8 @@ h2 {
     padding: 20px;
     margin-bottom: 20px;
     font-size: 50px;
-    word-spacing: 30px; /* Word spacing for a more spaced-out look */
-    font-style: oblique; /* Italic text style */
+    word-spacing: 30px; 
+    font-style: oblique;
     text-align: center;
 }
 
@@ -93,68 +91,127 @@ h3 {
 
 /*Styling for H4 headings (for projects)*/
 h4 {
-    font-size: 20px; /* Smaller size for subheadings */
+    font-size: 35px; 
     text-align: center;
 }
 
-/*Paragraph styling*/
-p {
-    font-size: 15px;
-    margin: 20px; /* Add some margin for spacing */
-    text-align: center;
+/*About Specific styling*/
+
+.about {
+    text-align: left;
+
+
 }
 
-/*Start of FORM styling*/
-form {
-    max-width: 400px; /* Limits the form width */
-    margin: 0 auto; /* Centers the form horizontally */
-    padding: 20px; /* Adds padding for spacing */
-    text-align: center; /* Centers the button and other elements */
+/*Services Specific styling*/
+
+.services {
+    text-align: left;
+
+    
 }
 
+/*Projects Specific styling*/
+
+.projects {
+    text-align: left;
+
+
+}
+
+
+/*get in touch specific styling*/
+.get-in-touch {
+    text-align: left;
+}
+
+/*Start of Filter Styling*/
+
+.filter-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto 20px auto; 
+}
+.filter-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#filter-dropdown {
+    padding: 5px;
+    font-size: 25px;
+    background-color: transparent;
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+#filter-dropdown option {
+    background-color: white; 
+    color: #000000; 
+}
+
+#selected-filter {
+    margin-right: 10px;
+    font-size: 16px;
+}
 /* Social Media Icon Styling */
 .personal-links {
-    text-align: center; /* Center align the social media icons */
-    margin-top: 20px; /* Add space above social media icons */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 .personal-links a {
-    margin: 0 10px; /* Space between icons */
+    margin: 10px; 
 }
 
 .personal-links img.icon {
-    width: 40px; /* Set a uniform size for social media icons */
-    height: auto; /* Maintain aspect ratio */
+    width: 40px; 
+    height: auto; 
 }
 
+/*End of Filter Styling*/
+
+/*Start of FORM styling*/
+
+form {
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center; 
+
+}
 
 input[type="text"], input[type="email"], textarea, select {
-    width: 100%; /* Makes fields take full width of the form */
-    padding: 5px; /* Adds padding for better spacing */
-    margin-bottom: 15px; /* Adds space between each field */
+    width: 100%; 
+    padding: 5px;
+    margin-bottom: 15px;
     margin-top: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+    box-sizing: border-box; 
     font-size: 16px;
-    color: black; /* Ensures text inside input fields is black */
-    background-color: white; /* Optional: Ensures the background is white for better contrast */
+    color: black;
+    background-color: white; 
 }
 
 textarea {
-    color: black; /* Text inside textarea is black */
-    background-color: white; /* Ensures background is white for readability */
+    color: black;
+    background-color: white; 
 }
 
 label {
-    padding: 5px; /* Adds padding around the label */
+    padding: 5px; 
 }
 
 button {
-    display: block; /* Makes the button a block element */
-    margin: 20px auto; /* Centers the button horizontally */
-    padding: 10px 20px; /* Adds some padding to the button */
-    background-color: #f1f1f1; /* Example button background */
+    display: block;
+    margin: 20px auto; 
+    padding: 10px 20px;
+    background-color: #f1f1f1;
     border: 1px solid #ccc;
     border-radius: 4px;
     color: black;
@@ -164,17 +221,17 @@ button {
 
 /*End of FORM styling*/
 
+/*Footer Styling*/
+
+
+footer {
+
+    text-align: center;
+}
+
 /* Smooth scrolling for the page */
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Adding comments for potential future features */
-/* TODO: Add filtering and sorting options for project showcase */
-/* TODO: Integrate form with email notification system */
-/* TODO: Ensure mobile responsiveness with media queries */
-/* TODO: Use a modern framework for improved performance and scalability */
-/* TODO: Add social media integration for LinkedIn, Twitter, GitHub */
-/* TODO: Optimize load times to be within 3 seconds */
-/* TODO: Include an interactive timeline for professional achievements */
