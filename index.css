@@ -7,17 +7,19 @@
     box-sizing: border-box; 
 }
 
-/*Header Styling*/
+/* General Header Styling for all devices */
 header {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center; /* Center the header content horizontally */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Center text inside the header */
+    padding: 30px;
 }
 
+/* Styling the h1 in the header */
 h1 {
-    letter-spacing: 60px; 
-    font-size: 100px; 
-    padding: 30px;
+    letter-spacing: 60px; /* Add space between characters */
+    font-size: 100px; /* Large font size for desktop */
     margin-top: 30px;
 }
 
@@ -34,8 +36,9 @@ h1 {
         justify-content: center; /* Ensure the header is still centered */
         text-align: center; /* Center-align the text */
     }
-
 }
+
+
 
 /*Body background setup*/
 body {
