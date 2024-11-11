@@ -3,145 +3,205 @@
 <head>
     <title>Juan Dela Cruz - Creative Portfolio</title>
     <!-- Link to external CSS files -->
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" href="font/stylesheet.css" type="text/css">
     <meta charset="UTF-8">
+    <script src="script.js"></script>
+
+
+    <!-- connect email JS API -->
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+        publicKey: "T-BFUCkhC3J3deY6_",
+    });
+    })();
+    </script>
+
 </head>
 <body>
 
+
     <!-- Header Section -->
-    <header>
-        <h1>juan dela cruz</h1> <!-- Portfolio owner name/title -->
-    </header>
+    <header id="top" class="container text-center my-5">
+        <h1 class="display-1">abigail galilo</h1>
+    </header>    
+    
     
     <!-- Navigation Bar -->
-    <nav id="top">
-        <!-- Navigation links for each section -->
-        <a href="#home" class="nav-link">home</a>
-        <a href="#about" class="nav-link">about</a>
-        <a href="#services" class="nav-link">services</a>
-        <a href="#projects" class="nav-link">projects</a>
-        <a href="#contact" class="nav-link">contact</a>
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a href="#home" class="nav-link">home</a>
+            <a href="#about" class="nav-link">about</a>
+            <a href="#services" class="nav-link">services</a>
+            <a href="#projects" class="nav-link">projects</a>
+            <a href="#contact" class="nav-link">contact</a>
+        </div>
     </nav>
-
     <!-- Home Section -->
     <section id="home">
         <h2>WEB DEVELOPMENT. DESIGN. ENTHUSIASM.</h2> <!-- catchphrase -->
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h3 class=" about ">about</h3> <!-- Heading introducing the 'About' section -->
-        <p>a passionate developer with experience in creating modern web applications. to build digital experiences that are engaging, functional, and visually appealing is my objective.</p> <!-- Introduction of the person -->
+    <section id="about" class="container my-5">
+        <h3 class="text-center">about</h3> <!-- Heading introducing the 'About' section -->
+        <p class="text-center">a passionate developer with experience in creating modern web applications. to build digital experiences that are engaging, functional, and visually appealing is my objective.</p> <!-- Introduction of the person -->
     </section>
 
     
     <!-- Services Section -->
-    <section id="services">
-        <h3 class = "services"> services</h3>
-        <!-- List of services offered -->
-        <ul>
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
-            <li>SEO Optimization</li>
-        </ul>
-    </section>
 
+    <section id="services">
+        <h3 class="services">services</h3> <!-- Title of the Services Section -->
+        <div class="services-container"> <!-- Container for service items -->
+            <div class="service-item">
+                <h4>Web Development</h4>
+                <p class="service-description">Create responsive and functional websites.</p>
+            </div>
+            <div class="service-item">
+                <h4>UI/UX Design</h4>
+                <p class="service-description">Design engaging and user-friendly interfaces.</p>
+            </div>
+            <div class="service-item">
+                <h4>SEO Optimization</h4>
+                <p class="service-description">Improve website visibility on search engines.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
      
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h3 class = "projects"> projects</h3>
+   <!-- Projects Section -->
+    
+<section id="projects" class="container my-5">
+    <h3 class="projects">projects</h3>
 
-         <!-- Filter Dropdown -->
-      <div class="filter-container">
+    <!-- Filter Icon and Dropdown -->
+    <div class="filter-container">
         <img src="images/10862915_fi_br_bars_filter_icon (1).png" alt="Filter Icon" class="filter-icon">
-        <span id="selected-filter">-</span> <!-- This will display the selected filter -->
-        
-        <!-- Dropdown for filtering options -->
-        <select id="filter-dropdown">
-            <option value="All" selected>All</option>
-            <option value="frontend">Front End</option>
-            <option value="backend">Back End</option>
-            <option value="fullstack">Full Stack</option>
-        </select>
-
-
-      <!-- List of Projects -->   
-
+        <div id="category-box" class="category-box">
+            <span class="category" data-category="ecommerce">E-Commerce</span>
+            <span class="category" data-category="finance">Finance</span>
+            <span class="category" data-category="transport">Transport</span>
+            <span class="category" data-category="tech">Tech</span>
+            <span class="category" data-category="art">Art</span>
+            <span class="category" data-category="fashion">Fashion</span>
+        </div>
+        <button id="remove-filter-btn" class="remove-filter-btn">Reset</button> <!-- Remove Filter Button -->
     </div>
 
-        <!-- Front End Project -->
-        <article class="project frontend">
-            <h4>Project 1 (Front End)</h4>
-            <p>A brief description of Front End Project 1.</p>
+    <!-- List of Projects -->
+    <div class="project-list">
+        <!-- E-Commerce Project -->
+        <article class="project ecommerce">
+            <h4>Project 1 (E-Commerce)</h4>
+            <p>A brief description of E-Commerce Project 1.</p>
         </article>
 
-        <!-- Back End Project -->
-        <article class="project backend">
-            <h4>Project 2 (Back End)</h4>
-            <p>A brief description of Back End Project 2.</p>
+        <!-- Finance Project -->
+        <article class="project finance">
+            <h4>Project 2 (Finance)</h4>
+            <p>A brief description of Finance Project 2.</p>
         </article>
 
-        <!-- Full Stack Project -->
-        <article class="project fullstack">
-            <h4>Project 3 (Full Stack)</h4>
-            <p>A brief description of Full Stack Project 3.</p>
+        <!-- Transport Project -->
+        <article class="project transport">
+            <h4>Project 3 (Transport)</h4>
+            <p>A brief description of Transport Project 3.</p>
         </article>
-    </section>
+
+        <!-- Tech Project -->
+        <article class="project tech">
+            <h4>Project 4 (Tech)</h4>
+            <p>A brief description of Tech Project 4.</p>
+        </article>
+
+        <!-- Art Project -->
+        <article class="project art">
+            <h4>Project 5 (Art)</h4>
+            <p>A brief description of Art Project 5.</p>
+        </article>
+
+        <!-- Fashion Project -->
+        <article class="project fashion">
+            <h4>Project 6 (Fashion)</h4>
+            <p>A brief description of Fashion Project 6.</p>
+        </article>
+    </div>
+</section>
+
+
 
 
     <!-- Contact Section -->
     <section id="contact">
-        <h3 class="get-in-touch"> get in touch </h3> <!-- Form heading for the contact section -->
+    <h3 class="get-in-touch"> get in touch </h3> <!-- Form heading for the contact section -->
 
-        <!-- Social Media Links with Icons -->
-        <div class="personal-links">
-            <a href="mailto:juandelacruz@gmail.com" target="_blank">
-                <img src="images/7091829_message_mail_ui_email_user interface_icon.png" alt="Email Icon" class="icon">
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <img src="images/4070143_linkedin_social icons_social media_icon.png" alt="LinkedIn Icon" class="icon">
-            </a>
-            <a href="https://github.com" target="_blank">
-                <img src="images/211903_github_social_icon.png" alt="GitHub Icon" class="icon">
-            </a>
-            <a href="https://x.com/?logout=1727794332155" target="_blank">
-                <img src="images/4070150_tweet_twitter_twitter icon_icon.png" alt="Twitter Icon" class="icon">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="images/4070142_instagram_social icons_social media_icon.png" alt="Instagram Icon" class="icon">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="images/4070139_facebook_fb_social icon_social media_icon.png" alt="Facebook Icon" class="icon">
-            </a>
-            
+    <!-- Social Media Links with Icons -->
+    <div class="personal-links">
+        <a href="mailto:juandelacruz@gmail.com" target="_blank" class="social-link">
+            <span class="social-text">Email</span>
+            <img src="images/7091829_message_mail_ui_email_user interface_icon.png" alt="Email Icon" class="icon">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-link">
+            <span class="social-text">LinkedIn</span>
+            <img src="images/4070143_linkedin_social icons_social media_icon.png" alt="LinkedIn Icon" class="icon">
+        </a>
+        <a href="https://github.com" target="_blank" class="social-link">
+            <span class="social-text">GitHub</span>
+            <img src="images/211903_github_social_icon.png" alt="GitHub Icon" class="icon">
+        </a>
+        <a href="https://x.com/?logout=1727794332155" target="_blank" class="social-link">
+            <span class="social-text">Twitter</span>
+            <img src="images/4070150_tweet_twitter_twitter icon_icon.png" alt="Twitter Icon" class="icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-link">
+            <span class="social-text">Instagram</span>
+            <img src="images/4070142_instagram_social icons_social media_icon.png" alt="Instagram Icon" class="icon">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-link">
+            <span class="social-text">Facebook</span>
+            <img src="images/4070139_facebook_fb_social icon_social media_icon.png" alt="Facebook Icon" class="icon">
+        </a>
+    </div>
+
+    <form id="contact-form" class="container my-5">
+        <!-- Input fields for contact form -->
+        <div class="form-group">
+            <label for="name">Name:</label> <!-- Name text input -->
+            <input type="text" id="name" name="name" class="form-control" required>
         </div>
-        
-        <form action="#" method="post">
-            <!-- Input fields for contact form -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required> <!-- Text input for Name -->
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required> <!-- Text input for Email -->
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea> <!-- Message input -->
-            <br>
-            <button type="submit">Send Message</button> <!-- Submit button for the form -->
-        </form>
+        <div class="form-group">
+            <label for="email">Email:</label> <!-- Email text input -->
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label> <!-- Message text input -->
+            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+
+
+    </form>
+    
 
            
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="container text-center py-4">
         <p>&copy; 2024 Juan Dela Cruz. All rights reserved.</p> <!-- Footer section with copyright -->
         
     </footer>
     <!-- Back to Top Link -->
-     <a href="#top" class="back-to-top">Back to Top</a>
+    <a href="#top" class="btn btn-primary back-to-top position-fixed">Back to Top</a>
 
 </body>
 </html>

@@ -1,0 +1,510 @@
+/*Overall Font and color setup*/
+* { 
+    font-family: "chakra_petchlight"; 
+    color: rgb(255, 255, 255); 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* General Header Styling for all devices */
+header {
+    display: flex;
+    justify-content: center; /* Center the header content horizontally */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Center text inside the header */
+    padding: 30px;
+}
+
+/* Styling the h1 in the header */
+
+#top h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;  /* Add smooth transition */
+}
+
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) { 
+    /* For screens smaller than 768px (tablet and mobile) */
+    h1 {
+        letter-spacing: 10px; /* Decrease letter spacing for smaller screens */
+        font-size: 40px; /* Reduce font size to fit on mobile screens */
+    }
+
+    header {
+        padding: 20px; /* Adjust padding for mobile */
+        justify-content: center; /* Ensure the header is still centered */
+        text-align: center; /* Center-align the text */
+    }
+
+    .services {
+        grid-template-columns: 1fr; /* Stack items into a single column for smaller screens */
+    }
+}
+
+
+/*Body background setup*/
+body {
+    background-image: url('images/blackHeaderSlow2.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh;
+    padding-top: 80px;
+}
+/*Specific styles for sections*/
+
+section {
+    padding-left: 40px; 
+    margin: 20px; 
+}
+
+/* Specific styles for section titles (h3) */
+section h3 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+/* Specific styles for paragraph (p) text in sections */
+section p {
+    text-align: center;
+    font-size: 35px;
+    margin: 10px;
+}
+
+/*nav bar styling */
+nav {
+    position: sticky; /*Nav bar sticks when user scrolls*/
+    top: 0; /* Align the navbar to the top of the viewport */
+    left: 0; /* Align the navbar to the left side of the viewport */
+    width: 100%; /* Make the navbar span the full width */
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+    text-align: center; /* Center the nav links */
+    word-spacing: 20px; /* Spacing between the navigation links */
+    padding: 15px; /* Padding inside the navbar */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#nav {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#nav.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Navigation link styling */
+.nav-link { 
+    font-size: 30px; /* Large font size for nav links */
+    color: white; /* White color for the nav links */
+    text-decoration: none; /* Remove underline from the nav links */
+    padding: 10px; /* Add padding around the links */
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    color: #f1f1f1; /* Lighter color on hover */
+}
+
+
+
+/*Styling for H2 headings*/
+h2 {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    word-spacing: 30px; 
+    font-style: oblique;
+    text-align: center;
+}
+
+/*Styling for H3 headings*/
+h3 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+    margin: 20px;
+    padding: 30px;
+}
+
+/*Styling for H4 headings (for projects)*/
+h4 {
+    font-size: 35px; 
+    text-align: center;
+}
+
+/*About Specific styling*/
+
+.about {
+    text-align: left;
+
+
+}
+
+
+
+/*Projects Specific styling*/
+/* Filter Icon and Category Box */
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Category box that contains categories */
+.category-box {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.category {
+    display: block;
+    color: white;
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.1);
+    color: #ff6f61; /* Change color on hover */
+}
+
+/* Floating effect for categories */
+.category-box.floating .category {
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(-5px); }
+    100% { transform: translateY(5px); }
+}
+
+/* Style for selected (pinned) categories */
+.category.pinned {
+    color: #f1f1f1;
+    font-weight: bold;
+    animation: none; /* Stop the floating effect */
+}
+
+/* Projects Styling */
+.project-list {
+    margin-top: 20px;
+}
+
+.project {
+    margin: 15px 0;
+    display: block;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hidden projects based on selected category */
+.project.hidden {
+    display: none;
+}
+
+/* Remove Filter Button */
+.remove-filter-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-filter-btn:hover {
+    background-color: #ff3d2b;
+}
+
+
+/* Start of Services Specific styling */
+
+#services {
+    text-align: left; /* Align the title to the left */
+    margin-top: 40px;
+}
+
+.services {
+    margin-bottom: 20px; /* Space between title and service items */
+}
+
+/* Container for service items */
+.services-container {
+    display: flex; /* Use flexbox for the container */
+    flex-direction: row; /* Arrange items in a row (left to right) */
+    gap: 20px; /* Add space between items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Each service item */
+.service-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%; /* Ensure each service item takes up 30% of the container width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Pin button inside each service item */
+.pin-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Service description (hidden by default) */
+.service-description {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+/* Expanded view on hover */
+.service-item:hover .service-description {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.service-item:hover h4{
+    text-decoration: underline;
+}
+
+
+/* Pinned item style */
+.pinned {
+    background-color: rgba(255, 255, 255, 0.2); /* Lightened background */
+    border: 2px solid #fff;
+    /* Add styles for the pinned state */
+}
+
+.pinned .service-description {
+    max-height: 200px; /* Adjust to allow full content to be visible */
+    opacity: 1; /* Make description visible */
+}
+
+/* End of Services Specific styling */
+
+/* fiter styling */
+
+.filter-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto 20px auto; 
+}
+.filter-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease
+}
+
+#filter-dropdown {
+    padding: 5px;
+    font-size: 25px;
+    background-color: transparent;
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.filter-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+#filter-dropdown option {
+    background-color: white; 
+    color: #000000; 
+}
+
+#selected-filter {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+
+
+/* Social Media Icon Styling */
+.personal-links {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.personal-links a {
+    margin: 10px; 
+}
+
+.personal-links img.icon {
+    width: 40px; 
+    height: auto; 
+}
+.remove-filter-btn {
+    background-color: rgba(255, 255, 255, 0); 
+}
+
+
+
+/*End of Filter Styling*/
+
+/*Start of FORM styling*/
+
+form {
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center; 
+
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    width: 100%; 
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    color: black;
+    background-color: white; 
+}
+
+textarea {
+    color: black;
+    background-color: white; 
+}
+
+label {
+    padding: 5px; 
+}
+
+button {
+    display: block;
+    margin: 20px auto; 
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*End of FORM styling*/
+
+
+/* contact form styling */
+
+.personal-links {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.personal-links a {
+    position: relative;
+    display: inline-block;
+    margin: 10px; 
+}
+
+.personal-links img.icon {
+    width: 40px; 
+    height: auto; 
+    transition: transform 0.3s ease; /* Adding smooth transition for the icon */
+}
+
+.personal-links a:hover img.icon {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.social-text {
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease; /* Smooth transition */
+}
+
+.personal-links a:hover .social-text {
+    display: block;
+    opacity: 1;
+    bottom: -35px; /* Make it slightly move up */
+}
+
+
+/*Footer Styling*/
+
+
+footer {
+
+    text-align: center;
+}
+
+/* Smooth scrolling for the page */
+
+
+.back-to-top {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    display: none; /* Hide initially, will display on scroll */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
