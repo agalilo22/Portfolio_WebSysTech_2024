@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>Juan Dela Cruz - Creative Portfolio</title>
+    <meta name="description" content="Discover Juan Dela Cruz's web development portfolio. Explore projects, services, and get in touch for innovative web solutions.">
+    <meta name="keywords" content="web development, portfolio, UI/UX design, SEO optimization, Juan Dela Cruz">
     <!-- Link to external CSS files -->
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" href="font/stylesheet.css" type="text/css">
@@ -80,12 +82,14 @@
 
    <!-- Projects Section -->
     
-<section id="projects" class="container my-5">
+   <section id="projects" class="container my-5">
     <h3 class="projects">projects</h3>
 
-    <!-- Filter Icon and Dropdown -->
+    <!-- Filter Options -->
     <div class="filter-container">
-        <img src="images/10862915_fi_br_bars_filter_icon.png" alt="Filter Icon" class="filter-icon">
+        <p class="filter-label">Category</p> 
+
+        <!-- Category Filter -->
         <div id="category-box" class="category-box">
             <span class="category" data-category="ecommerce">E-Commerce</span>
             <span class="category" data-category="finance">Finance</span>
@@ -94,48 +98,64 @@
             <span class="category" data-category="art">Art</span>
             <span class="category" data-category="fashion">Fashion</span>
         </div>
+
+        <!-- Date Filter -->
+        <select id="date-filter" class="date-filter">
+            <option value="all">All Dates</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+
         <button id="remove-filter-btn" class="remove-filter-btn">Reset</button> <!-- Remove Filter Button -->
     </div>
 
     <!-- List of Projects -->
     <div class="project-list">
         <!-- E-Commerce Project -->
-        <article class="project ecommerce">
+        <article class="project ecommerce" data-date="2023">
             <h4>Project 1 (E-Commerce)</h4>
             <p>A brief description of E-Commerce Project 1.</p>
+            <span>Completed: 2023</span>
         </article>
 
         <!-- Finance Project -->
-        <article class="project finance">
+        <article class="project finance" data-date="2024">
             <h4>Project 2 (Finance)</h4>
             <p>A brief description of Finance Project 2.</p>
+            <span>Completed: 2024</span>
         </article>
 
         <!-- Transport Project -->
-        <article class="project transport">
+        <article class="project transport" data-date="2022">
             <h4>Project 3 (Transport)</h4>
             <p>A brief description of Transport Project 3.</p>
+            <span>Completed: 2022</span>
         </article>
 
         <!-- Tech Project -->
-        <article class="project tech">
+        <article class="project tech" data-date="2023">
             <h4>Project 4 (Tech)</h4>
             <p>A brief description of Tech Project 4.</p>
+            <span>Completed: 2023</span>
         </article>
 
         <!-- Art Project -->
-        <article class="project art">
+        <article class="project art" data-date="2024">
             <h4>Project 5 (Art)</h4>
             <p>A brief description of Art Project 5.</p>
+            <span>Completed: 2024</span>
         </article>
 
         <!-- Fashion Project -->
-        <article class="project fashion">
+        <article class="project fashion" data-date="2022">
             <h4>Project 6 (Fashion)</h4>
             <p>A brief description of Fashion Project 6.</p>
+            <span>Completed: 2022</span>
         </article>
     </div>
 </section>
+
 
 
 

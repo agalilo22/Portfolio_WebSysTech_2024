@@ -17,14 +17,13 @@ window.onscroll = function() {
         backToTop.style.display = "none";
     }
 };
-
-// filtering logic in projects
 document.addEventListener('DOMContentLoaded', function () {
-    const filterIcon = document.querySelector('.filter-icon');
+    const filterIcon = document.querySelector('.filter-label');
     const categoryBox = document.querySelector('.category-box');
     const categories = document.querySelectorAll('.category');
     const projects = document.querySelectorAll('.project');
     const removeFilterBtn = document.getElementById('remove-filter-btn');
+    const dateFilter = document.getElementById('date-filter');
 
     // Show category box when the filter icon is clicked
     filterIcon.addEventListener('click', function () {
@@ -35,58 +34,49 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle category click (pinning and filtering)
     categories.forEach(category => {
         category.addEventListener('click', function () {
-            // Pin/unpin the clicked category
-            category.classList.toggle('pinned');
-            
-            // Get the category data
-            const selectedCategory = category.dataset.category;
-            
-            // Filter the projects based on pinned categories
-            filterProjects();
+            category.classList.toggle('pinned'); // Pin/unpin the clicked category
+            filterProjects(); // Apply filtering logic
         });
+    });
+
+    // Handle date filter change
+    dateFilter.addEventListener('change', function () {
+        filterProjects(); // Apply filtering logic
     });
 
     // Remove filter button - Show all projects
     removeFilterBtn.addEventListener('click', function () {
-        // Unpin all categories
-        categories.forEach(category => category.classList.remove('pinned'));
-
-        // Show all projects
-        projects.forEach(project => {
-            project.classList.remove('hidden');
-        });
-
-        // Close the category box
-        categoryBox.style.display = 'none';
+        categories.forEach(category => category.classList.remove('pinned')); // Unpin all categories
+        dateFilter.value = "all"; // Reset date filter
+        projects.forEach(project => project.classList.remove('hidden')); // Show all projects
+        categoryBox.style.display = 'none'; // Close the category box
     });
 
-
+    // Filtering logic
     function filterProjects() {
-        // Hide all projects initially
-        projects.forEach(project => {
-            project.classList.add('hidden');
-        });
-
-        // Get all pinned categories
         const pinnedCategories = Array.from(categories)
             .filter(category => category.classList.contains('pinned'))
             .map(category => category.dataset.category);
 
-        // Show projects that match the pinned categories
-        if (pinnedCategories.length === 0) {
-            // If no categories are pinned, show all projects
-            projects.forEach(project => {
+        const selectedDate = dateFilter.value;
+
+        projects.forEach(project => {
+            const projectCategory = Array.from(project.classList).find(cls => cls !== 'project');
+            const projectDate = project.dataset.date;
+
+            const matchesCategory = pinnedCategories.length === 0 || pinnedCategories.includes(projectCategory);
+            const matchesDate = selectedDate === "all" || projectDate === selectedDate;
+
+            // Show project if it matches both filters
+            if (matchesCategory && matchesDate) {
                 project.classList.remove('hidden');
-            });
-        } else {
-            projects.forEach(project => {
-                if (pinnedCategories.some(category => project.classList.contains(category))) {
-                    project.classList.remove('hidden');
-                }
-            });
-        }
+            } else {
+                project.classList.add('hidden');
+            }
+        });
     }
 });
+
 
 
 // JavaScript to add shadow when scrolling past the navbar
@@ -121,9 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
             email: email,
             message: message
         };
+        
+        // Notification to the sender
+        emailjs.send('service_h6mjf05', 'template_7yo7jmw' , templateParams)
 
         // Send the email using EmailJS
-        emailjs.send('service_h6mjf05', 'template_ot4vzsy', templateParams)
+        emailjs.send('service_h6mjf05', 'template_ot4vzsy' , templateParams)
             .then(function(response) {
                 // If successful, show a success message
                 alert('Message sent successfully!');
@@ -135,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             
     });
+
+    // template_ot4vzsy
 
     
 });
